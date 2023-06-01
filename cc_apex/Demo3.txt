@@ -1,0 +1,16 @@
+public class Demo3 {
+    public void DeleteAccount(){
+        List<Account> oldAccounts = new List<Account>();
+        for(Account acc:[select Name,Phone from Account where Name='Parth']){
+            delete acc;
+            System.debug('Account.deleted : '+acc.name);
+        }
+        update oldAccounts;
+        
+    }
+
+}
+
+debug=
+Demo3 acc=new Demo3();
+acc.DeleteAccount();

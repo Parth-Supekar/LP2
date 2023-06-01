@@ -1,0 +1,13 @@
+public class Demo1 {
+    public void CreateAccount(String Name,String Phone){
+        account acc=new account();
+        acc.Name=Name;
+        acc.Phone=Phone;
+        insert acc;
+        System.debug('Account has been inserted : '+acc.name);
+    }
+
+}
+
+Demo1 acc=new Demo1();
+acc.CreateAccount('Parth','239685523');

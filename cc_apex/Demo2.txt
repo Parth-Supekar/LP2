@@ -1,0 +1,16 @@
+public class Demo2 {
+    public void UpdateOlderAccount(String Name){
+        List<Account> oldAccounts = new List<Account>();
+        for(Account acc:[SELECT Name from account where Phone='9370185520'])
+        {
+            acc.Name=Name;
+            oldAccounts.add(acc);
+            System.debug('Account has been updated '+acc.name);
+            
+        }
+        update oldAccounts;
+    }
+
+}
+
+debug=
